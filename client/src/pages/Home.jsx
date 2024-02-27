@@ -24,7 +24,7 @@ function Home() {
       editNote: note,
       showNoteForm: true
     })
-    setShowNoteForm(true)
+    setState(true)
   }
 
   const deleteNote = async (note_id, index) => {
