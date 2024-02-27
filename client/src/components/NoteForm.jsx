@@ -35,7 +35,7 @@ function NoteForm() {
 
       state.editNote.text = noteText
 
-      setStae({
+      setState({
         ...state,
         notes: [...state.notes],
         showNoteForm: false,
@@ -46,7 +46,7 @@ function NoteForm() {
   }
 
   const closeModal = () => {
-    setStae({
+    setState({
       ...state,
       showNoteForm: false,
       editNote: null
