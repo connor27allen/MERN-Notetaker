@@ -1,27 +1,22 @@
-import {useContext, createContext, useState} from 'react'
+import { useContext, createContext, useState } from 'react'
 
 const Context = createContext()
 
-export function Provider ({ children }) {
-    const [state, setState] = useState({
-        showNoteForm: false,
-        notes: [],
-        editNote: null
-    })
+export function Provider({ children }) {
+  const [state, setState] = useState({
+    showNoteForm: false,
+    notes: [],
+    editNote: null
+  })
 
-    // const [showNoteForm, setSHowNoteForm] = useState(false)
-    // const [notes, setNotes] = useState([])
-    // const [editNote, setEditNote] = useState(null)
-
-
-return (
+  return (
     <Context.Provider value={{
-        state,
-        setState
+      state,
+      setState
     }}>
-        {children}
+      {children}
     </Context.Provider>
-)
+  )
 }
 
 export const useStore = () => useContext(Context)

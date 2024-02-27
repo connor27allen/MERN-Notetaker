@@ -33,13 +33,7 @@ function NoteForm() {
         text: noteText
       })
 
-      // state.editNote.text = noteText
-      const updatedNotes = state.notes.map(note => {
-        if (note._id === state.editNote._id) {
-          return { ...note, text: noteText };
-        }
-        return note;
-      });
+      state.editNote.text = noteText
 
       setState({
         ...state,
